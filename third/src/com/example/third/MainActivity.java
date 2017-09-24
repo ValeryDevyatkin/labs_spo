@@ -17,8 +17,9 @@ public class MainActivity extends Activity {
 		final Toast toast = Toast.makeText(getApplicationContext(), "Image", Toast.LENGTH_SHORT);
 		toast.setGravity(0, 0, 200);
 		
-		Button button=(Button)findViewById(R.id.blackButton);
-		button.setOnClickListener(new View.OnClickListener() {	
+		Button button1=(Button)findViewById(R.id.blackButton);
+		button1.setBackgroundColor(Color.GRAY);
+		button1.setOnClickListener(new View.OnClickListener() {	
 			@Override
 			public void onClick(View arg0) {
 			    back.setBackgroundColor(Color.BLACK);
@@ -28,6 +29,7 @@ public class MainActivity extends Activity {
 		});
 		
 		Button button2=(Button)findViewById(R.id.whiteButton);
+		button2.setBackgroundColor(Color.GRAY);
 		button2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -38,6 +40,7 @@ public class MainActivity extends Activity {
 		});
 		
 		Button button3=(Button)findViewById(R.id.greenButton);
+		button3.setBackgroundColor(Color.GRAY);
 		button3.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -48,6 +51,7 @@ public class MainActivity extends Activity {
 		});
 		
 		Button button4=(Button)findViewById(R.id.imageButton);
+		button4.setBackgroundColor(Color.GRAY);
 		button4.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
