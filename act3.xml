@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.third.MainActivity" >
+
+    <ImageView
+        android:id="@+id/background"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <Button
+        android:id="@+id/blackButton"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:text="Black" />
+
+    <Button
+        android:id="@+id/whiteButton"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blackButton"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:text="White" />
+    
+    <Button
+        android:id="@+id/greenButton"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/whiteButton"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:text="Green" />
+
+    <Button
+        android:id="@+id/imageButton"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greenButton"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:text="Image" />
+  
+</RelativeLayout>
