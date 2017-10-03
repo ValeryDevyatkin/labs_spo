@@ -2,7 +2,6 @@ package com.example.fourth;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Color;
 import android.view.Menu;
 import android.view.View;
 import android.widget.*;
