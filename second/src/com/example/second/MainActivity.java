@@ -5,28 +5,32 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.*;
-import android.graphics.Color;
 
 public class MainActivity extends Activity {
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main); 
-		final Toast toast = Toast.makeText(getApplicationContext(), "Hello, world!", Toast.LENGTH_SHORT);
-	    toast.setGravity(0, 0, 200);
-		final TextView tx=(TextView)findViewById(R.id.textView);
-		Button button=(Button)findViewById(R.id.myButton);
-		button.setOnClickListener(new View.OnClickListener() {
-			int idx=0;
+		setContentView(R.layout.activity_main);
+		Button but=(Button)findViewById(R.id.myButton);
+		but.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (idx==0) tx.setTextColor(Color.RED);
-				else if (idx==1) tx.setTextColor(Color.BLUE);
-				else if (idx==2) tx.setTextColor(Color.GREEN);
-				idx=(idx+1)%3;
+				EditText text1=(EditText)findViewById(R.id.editText1);
+				EditText text2=(EditText)findViewById(R.id.editText2);
+				EditText text3=(EditText)findViewById(R.id.editText3);
+				Toast toast;
+				if (text1.getText().toString().equals("") || text2.getText().toString().equals("") || text3.getText().toString().equals("")) 
+					toast = Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT);
+				else 
+					toast = Toast.makeText(getApplicationContext(), text1.getText().toString()+
+							"\n"+text2.getText().toString()+"\n"+
+							text3.getText().toString(), Toast.LENGTH_SHORT);
+				toast.setGravity(0, 0, 150);
 			    toast.show();
 			}
 		});
+
 	}
 
 	@Override

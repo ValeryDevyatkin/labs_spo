@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 					fop.write(filename, content);
 			        if (fop.write(filename, content)) {
 			        	Toast.makeText(getApplicationContext(), "XXX"+filename+".txt created", Toast.LENGTH_SHORT).show();
+			        	fnameread.setText(filename);
 			        } else {
 			            Toast.makeText(getApplicationContext(), "I/O error", Toast.LENGTH_SHORT).show();
 			        }
