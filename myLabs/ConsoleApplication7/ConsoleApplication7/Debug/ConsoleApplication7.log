@@ -1,0 +1,4 @@
+﻿  ConsoleApplication7.cpp
+c:\users\local-v97\documents\visual studio 2015\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  ConsoleApplication7.vcxproj -> C:\Users\local-V97\documents\visual studio 2015\Projects\ConsoleApplication7\Debug\ConsoleApplication7.exe
+  ConsoleApplication7.vcxproj -> C:\Users\local-V97\documents\visual studio 2015\Projects\ConsoleApplication7\Debug\ConsoleApplication7.pdb (Full PDB)
