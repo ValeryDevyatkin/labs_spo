@@ -23,7 +23,7 @@ int thread01(){
 		WaitForSingleObject(hMutex01, INFINITE); // Захват мьютекса 
 		for (int j = 0; j < n; j++) { 
 			LONG k = rand() % 19 - 9;
-			InterlockedExchange(&mas[j], k);
+			mas[j]=k;
 			cout << setw(3)  << mas[j]; 
 			Sleep(100); 
 		}
@@ -44,7 +44,7 @@ int thread02() {
 	{
 		WaitForSingleObject(hMutex02, INFINITE);// Захват мьютекса 
 		for (int j = 0; j < n; j++) { 
-			if (mas[j]>0) InterlockedExchange(&mas[j], 0);
+			if (mas[j]>0) mas[j]=0;
 			cout << setw(3) << mas[j];
 			Sleep(100);
 		}
