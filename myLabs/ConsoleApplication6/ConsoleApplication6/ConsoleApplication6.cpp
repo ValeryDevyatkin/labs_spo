@@ -21,7 +21,7 @@ void thread01()
 		if (i == -1) i = n-1;
 		EnterCriticalSection(&CrS);
 		LONG k = rand()%7-3;
-		InterlockedExchange(&mas[i], k);
+		mas[i]=k;
 		Sleep(300);
 		LeaveCriticalSection(&CrS);
 		i--;
@@ -47,7 +47,7 @@ void thread02()
 		if (!mas[0]) {
 			for (int i = 1; i < n; i++) {
 				if (mas[i] > 0) {
-					InterlockedExchange(&mas[0], mas[i]);
+					mas[0]=mas[i];
 					break;
 				}
 			}
